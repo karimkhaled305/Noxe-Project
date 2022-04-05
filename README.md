@@ -1,2 +1,2 @@
 # Noxe-Project
-noxe is an movie app show trending movies and people 
+noxe is a movie app that show trending movies and people 
