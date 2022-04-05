@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg d-flex align-items-center p-3 ">
+    <div class="container-fluid">
+        <h3 class="mb-0 me-4 navbar-brand myBrand">Noxe</h3>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav list-unstyled d-flex justify-content-around mb-0 align-items-center">
+                <li class="nav-item ms-4">
+                    <a aria-current="page" *ngIf="isLogin" class="active" routerLink="/home" routerLinkActive="activeLink">home</a>
+                </li>
+                <li class="nav-item ms-4"><a aria-current="page" class="active" *ngIf="isLogin" routerLink="/about"
+                        routerLinkActive="activeLink">about</a>
+                </li>
+                <li class="nav-item ms-4"><a aria-current="page" class="active" *ngIf="isLogin" routerLink="/gallery"
+                        routerLinkActive="activeLink">gallery</a>
+                    </li>
+                <li class="nav-item ms-4"><a aria-current="page" class="active" *ngIf="isLogin" routerLink="/contacts"
+                        routerLinkActive="activeLink">contacts</a>
+                    </li>
+                <li class="nav-item ms-4"><a aria-current="page" class="active" *ngIf="isLogin" routerLink="/tv"
+                        routerLinkActive="activeLink">tv</a>
+                    </li>
+                <li class="nav-item ms-4"><a aria-current="page" class="active" *ngIf="isLogin" routerLink="/people"
+                        routerLinkActive="activeLink">people</a>
+                    </li>
+            </ul>
+        </div>
+            <div class="d-flex align-items-center ms-auto">
+                <i class="fab fa-facebook ms-4"></i>
+                <i class="fab fa-instagram ms-4"></i>
+                <i class="fab fa-twitter ms-4"></i>
+                <i class="fab fa-spotify ms-4"></i>
+                <ul class=" list-unstyled d-flex justify-content-around mb-0 align-items-center">
+                    <li class="ms-4"><a *ngIf="!isLogin" routerLink="/register">Register</a></li>
+                    <li class="ms-4"><a *ngIf="!isLogin" routerLink="/login">Login</a></li>
+                    <p *ngIf="isLogin" class="d-flex align-items-center mb-0 ms-2">Welcome {{firstName}}</p>
+                    <li class="ms-4"><a class="curs" (click)="callLogout()" *ngIf="isLogin">Logout</a></li>
+                </ul>
+
+            </div>
+
+
+       
+    </div>
+
+</nav>

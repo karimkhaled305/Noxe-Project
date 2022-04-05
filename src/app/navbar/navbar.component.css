@@ -1,0 +1,31 @@
+.myBrand
+{
+    font-weight:900;
+    font-size: 2rem;
+}
+.curs
+{
+    cursor: pointer;
+}
+.activeLink
+{
+    color:white;
+    background-color: rgba(201, 31, 31, 0.719);
+    padding: 5px;
+    border-radius:8px;
+    font-weight: bolder;
+}
+li a:hover {
+    color:white;
+    background-color: rgba(201, 31, 31, 0.719);
+    padding: 5px;
+    border-radius:8px;
+    font-weight: bolder;
+}
+
+
+   .navbar-toggler-icon
+   {
+       border:none;
+     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='1' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+   } 

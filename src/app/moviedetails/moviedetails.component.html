@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <img class="w-100" [src]="imagePrefix+movieDetail.poster_path" alt="">
+        </div>
+        <div class="col-md-9">
+            <h2 class="fw-bolder">{{movieDetail.original_title}}</h2>
+            <p class=" fw-light text-muted">{{movieDetail.overview}}</p>
+            <div class="d-flex justify-content-around runDetail">
+                <p>revenue : {{movieDetail.revenue}}</p>
+                <p>run time : {{movieDetail.runtime}}</p>
+            </div>
+            <h3 class="h4">Genres :</h3>
+            <ul>
+                <li *ngFor="let g of movieDetail.genres">{{g.name}}</li>
+            </ul>
+        </div>
+
+    </div>
+</div>

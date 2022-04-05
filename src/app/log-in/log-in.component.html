@@ -1,0 +1,36 @@
+<div class="container mt-5">
+
+    <div class="w-50 mx-auto">
+        <h3 class="mb-5">Log in</h3>
+        <form (ngSubmit)="authen(loginForm)" [formGroup]="loginForm">
+            <h4 *ngIf="error" class="text-danger fs-4">{{error}}</h4>
+            <label for="email">email</label>
+            <input
+                [ngStyle]="{'border': loginForm.get('email')?.errors && loginForm.get('email')?.touched ? '2px solid red' : ''}"
+                type="email" class="form-control" formControlName="email">
+            <div *ngIf="loginForm.get('email')?.errors&& 
+    loginForm.get('email')?.touched ">
+                <p *ngIf="loginForm.get('email')?.errors?.['required']&& 
+        loginForm.get('email')?.touched" class="err mb-0">email is required</p>
+                <p *ngIf="loginForm.get('email')?.errors?.['email']&& 
+        loginForm.get('email')?.touched" class="err mb-0">email is invalid</p>
+            </div>
+
+            <label for="password">password</label>
+            <input
+                [ngStyle]="{'border': loginForm.get('password')?.errors && loginForm.get('password')?.touched ? '2px solid red' : ''}"
+                type="password" class="form-control" formControlName="password">
+            <div *ngIf="loginForm.get('password')?.errors&& 
+    loginForm.get('password')?.touched ">
+                <p *ngIf="loginForm.get('password')?.errors?.['required']&& 
+    loginForm.get('password')?.touched" class="err mb-0">password is required</p>
+                <p *ngIf="loginForm.get('password')?.errors?.['pattern']&& 
+        loginForm.get('password')?.touched" class="err mb-0">First Letter should be capital <br> min length should be 7
+                    <br> max length should be 10</p>
+            </div>
+            <button [disabled]="loginForm.invalid" type="submit" class="btn btn-outline-light mt-4">log in</button>
+
+        </form>
+
+    </div>
+</div>
