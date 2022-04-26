@@ -17,6 +17,6 @@
 **it's movie and poeple trending app**
 
 ### Technologies
-- Html and Scss , bootstrap
+- Html and Css , bootstrap
 - Type Script \ jquery \ Rxjs library
 - Angular \ Routing
